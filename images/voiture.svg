@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
+  <!-- Voiture cartoon vue de dessus, l'avant vers le haut. Contour blanc
+       autour du trait sombre, comme un autocollant, pour ressortir sur la carte. -->
+  <defs>
+    <clipPath id="body">
+      <rect x="128" y="44" width="224" height="396" rx="96"/>
+    </clipPath>
+    <clipPath id="roof">
+      <rect x="160" y="196" width="160" height="150" rx="44"/>
+    </clipPath>
+  </defs>
+
+  <!-- Ombre portée, décalée, sans flou -->
+  <g fill="#1A1446" opacity="0.2" transform="translate(12 16)">
+    <rect x="128" y="44" width="224" height="396" rx="96"/>
+    <rect x="94" y="104" width="292" height="88" rx="24"/>
+    <rect x="94" y="300" width="292" height="88" rx="24"/>
+  </g>
+
+  <!-- Bord blanc autour de toute la silhouette -->
+  <g fill="#FFFFFF" stroke="#FFFFFF" stroke-width="32" stroke-linejoin="round">
+    <rect x="128" y="44" width="224" height="396" rx="96"/>
+    <rect x="94" y="104" width="292" height="88" rx="24"/>
+    <rect x="94" y="300" width="292" height="88" rx="24"/>
+  </g>
+
+  <!-- Roues, qui dépassent de la carrosserie -->
+  <g fill="#1A1446">
+    <rect x="94" y="104" width="64" height="88" rx="22"/>
+    <rect x="322" y="104" width="64" height="88" rx="22"/>
+    <rect x="94" y="300" width="64" height="88" rx="22"/>
+    <rect x="322" y="300" width="64" height="88" rx="22"/>
+  </g>
+  <g fill="none" stroke="#4A4766" stroke-width="8" stroke-linecap="round">
+    <path d="M 110 124 L 110 172"/>
+    <path d="M 370 124 L 370 172"/>
+    <path d="M 110 320 L 110 368"/>
+    <path d="M 370 320 L 370 368"/>
+  </g>
+
+  <!-- Carrosserie : trait sombre, deux tons -->
+  <rect x="128" y="44" width="224" height="396" rx="96" fill="#5A50F0"/>
+  <g clip-path="url(#body)">
+    <rect x="296" y="0" width="80" height="480" fill="#463DD6"/>
+    <rect x="100" y="388" width="280" height="80" fill="#463DD6"/>
+  </g>
+  <rect x="128" y="44" width="224" height="396" rx="96" fill="none" stroke="#1A1446" stroke-width="14"/>
+
+  <!-- Rétroviseurs -->
+  <g fill="#5A50F0" stroke="#1A1446" stroke-width="10">
+    <rect x="104" y="196" width="34" height="26" rx="12"/>
+    <rect x="342" y="196" width="34" height="26" rx="12"/>
+  </g>
+
+  <!-- Pare-brise, vitres, lunette arrière -->
+  <path d="M 166 186 Q 166 150 200 146 L 280 146 Q 314 150 314 186 L 306 214 L 174 214 Z"
+        fill="#23206A" stroke="#1A1446" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M 186 168 L 214 160" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+  <path d="M 176 338 L 304 338 L 298 368 Q 294 380 280 380 L 200 380 Q 186 380 182 368 Z"
+        fill="#23206A" stroke="#1A1446" stroke-width="10" stroke-linejoin="round"/>
+
+  <!-- Toit, plus clair, avec un reflet -->
+  <rect x="160" y="196" width="160" height="150" rx="44" fill="#7B73FF"/>
+  <g clip-path="url(#roof)">
+    <rect x="276" y="180" width="60" height="180" fill="#6A61F7"/>
+  </g>
+  <rect x="160" y="196" width="160" height="150" rx="44" fill="none" stroke="#1A1446" stroke-width="10"/>
+  <path d="M 186 230 Q 188 214 206 212" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Reflet sur le capot -->
+  <path d="M 178 92 Q 190 72 214 66" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Phares et feux -->
+  <g stroke="#1A1446" stroke-width="8">
+    <ellipse cx="180" cy="70" rx="22" ry="14" fill="#FFE066"/>
+    <ellipse cx="300" cy="70" rx="22" ry="14" fill="#FFE066"/>
+    <rect x="158" y="418" width="40" height="16" rx="8" fill="#FF5A5F"/>
+    <rect x="282" y="418" width="40" height="16" rx="8" fill="#FF5A5F"/>
+  </g>
+</svg>
